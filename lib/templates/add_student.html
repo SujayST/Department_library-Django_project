@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Add Students</title>{% endblock %}
+
+{% block body %}
+<h1 class="b">New Students Entry Portal</h1>
+<h2>Student Addition page</h2>
+
+
+<h1>Enter Students Info.</h1>
+<div class="form1">
+<form name="form" enctype="multipart/form-data"  method="POST">
+    {% csrf_token %}
+    <!--<div style = "max-width:578px;"-->
+    <div class="form-group" style = "max-width:408px;">
+    <label for="usn"><h3>USN:</h3></label>
+    <input id="usn" class="form-control form-control-lg" type = "text"  name = "USN" value="" />
+    </div>
+    <br>
+    <div class="form-group" style = "max-width:408px;">
+    <label for="s"><h3>Name:</h3></label>
+    <input id="s" class="form-control form-control-lg" type = "text"   name = "Name" value=""/>
+    </div>
+    <br>
+    <div class="form-group" style = "max-width:408px;">
+    <label for="sem"><h3>Semester</h3></label>
+    <input id="sem" class="form-control form-control-lg" type = "text"  name = "Semester" value="" />
+    </div>
+    <br>
+    <div class="form-group"style = "max-width:408px;" >
+        <label for="ph"><h3>Phone No.:</h3></label>
+    <input id="ph" class="form-control form-control-lg" type = "text"  name = "phone_no" value="" />
+    </div>
+    <br>
+ <!--   {{ form.as_p}}-->
+    <div class="submit">
+    <button class="btn btn-success"  type="submit" name="button"><h2>Submit</h2></button>
+    </div>
+
+</form>
+</div>
+
+<h1 class="a"> </h1>
+
+
+</body>
+{% endblock %}

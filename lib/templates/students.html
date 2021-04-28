@@ -8,8 +8,8 @@
 
 
 <h1>List of Students</h1>
-<table  width=90% bgcolor=#33cccc cellpadding="8"  >
-    <tr  bgcolor="white" align="center">
+<table width=90% bgcolor=#33cccc cellpadding="8">
+    <tr bgcolor="white" align="center">
         <th><h2>Student USN</h2></th>
         <th><h2>Name</h2></th>
         <th><h2>Semester</h2></th>
@@ -17,16 +17,18 @@
     </tr>
 
     {% for obj in allvideos %}
-    <tr class="tr" align="center"  >
-        <td><h3>{{ obj.USN }}</h3> <div class="n"></div> </td>
+    <tr class="tr" align="center">
+        <td><h3>{{ obj.USN }}</h3>
+            <div class="n"></div>
+        </td>
         <td><h3>{{ obj.Name }}</h3></td>
         <td><h3>{{ obj.Semester }}</h3></td>
         <td><h3>{{ obj.phone_no}}</h3></td>
     </tr>
 
-{% endfor %}
+    {% endfor %}
 </table>
-<h1 class="a"> </h1>
+<h1 class="a"></h1>
 
 
 </body>

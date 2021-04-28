@@ -3,36 +3,36 @@
 {% block title %}<title>home</title>{% endblock %}
 {% block body %}
 {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 
-<h1 class="b" >List of Books Available</h1>
-<!--<h3 class="d">Welcome to our home page</h3>
-<h2 class="d">{{name}}</h2>
--->
-<h1 class="a"> </h1>
-<table  width="1800" bgcolor=#33cccc cellpadding="15" >
-<tr  bgcolor="white">
-<th><h2>book_id</h2></th>
-<th><h2>title</h2></th>
-<th><h2>author</h2></th>
-<th><h2>No of Copies Available</h2></th>
-<th><h2>last_borrowed</h2></th>
-</tr>
+<h1 class="b" style="font-size: 30px">WELCOME TO DEPARTMENT LIBRARY</h1>
+<h1 class="b">List of Books Available :</h1>
 
-{% for obj in all_books %}
-<tr class="tr" align="center"  >
-    <td><h3>{{ obj.book_id}}</h3><div class="n"></div></td>
-    <td><h3>{{ obj.title }}</h3></td>
-    <td><h3>{{ obj.author}}</h3></td>
-    <td><h3>{{ obj.No_of_Copies}}</h3></td>
-    <td><h3>{{ obj.last_borrowed}}</h3></td>
-</tr>
+<h1 class="a"></h1>
+<div>
+    <table id="table" bgcolor=#dae0e0 cellpadding="15">
+        <tr bgcolor="white">
+            <th><h2>Book_id</h2></th>
+            <th><h2>Title</h2></th>
+            <th><h2>Author</h2></th>
+            <th><h2>No of Copies Available</h2></th>
+            <th><h2>last_borrowed</h2></th>
+        </tr>
 
-{% endfor %}
-</table>
-<h1 class="a"> </h1>
-<button class="btn btn-default" onclick="document.getElementById('demo').innerHTML=Date()" >The time is?</button>
-<img src= "{% static 'Background-website-01.jpg' %}"  width= 20% >
+        {% for obj in all_books %}
+        <tr class="tr" align="center">
+            <td><h3 class="bk">{{ obj.book_id}}</h3>
+                <div class="n"></div>
+            </td>
+            <td><h3 class="bk">{{ obj.title }}</h3></td>
+            <td><h3 class="bk">{{ obj.author}}</h3></td>
+            <td><h3 class="bk">{{ obj.No_of_Copies}}</h3></td>
+            <td><h3 class="bk">{{ obj.last_borrowed}}</h3></td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+<h1 class="a"></h1>
 
 <p id="demo"></p>
 {% endblock %}

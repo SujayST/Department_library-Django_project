@@ -1,38 +1,53 @@
 {% load static %}
-h1 {
-color:red;
-background color: blue;
-}
-
-  .b{
-         position : static;
-         padding: 20px;
-         color: white;
-         background-color: #999999;
-         width: 90%;
+ h1{
+    color:red;
+    background color: blue;
+ }
+ .bk{
+    font-size: 2vh;
+ }
+ .a{
+   background-image: url("{% static 'Background-website-01.jpg' %}");
   }
-  .d{
+  label{
+  display:inline;
+  }
+  label > h3{
+  display: inline;
+  }
+  input{
+  float:left;}
+ .b{
+    position : relative;
+
+    padding: 10px;
+    padding-left : 60px;
+    color: white;
+    background-color: #999999;
+    width: 100%;
+  }
+ .d{
          padding-left: 25px;
          position: relative;
     }
  .e{
-         position: absolute;
-         padding-top : 20px ;
-         width: 90%;
+         position: relative;
+         padding : 20px;
+         width: 100%;
          background-color: #cccccc;
 
-         }
-         .n{
+   }
+ .n{
          border-bottom-style: solid;
          border-color: red;
          }
-         .tr:hover{
+ .tr:hover{
           background-color: #85e0e0;
          }
-         .c:hover{
+ .c:hover{
          background-color: #29a3a3;
          }
-         .c:link{
+ .c:link{
          color: white;
          }
 .c{
@@ -51,14 +66,25 @@ background color: blue;
           margin: 4px 2px;
           cursor: pointer;
 }
-
-.form1{
+  #table{
+  margin-left: 60px;
+  border: 3px solid black;
+  border-radius: 50px;
+  }
+.form1,.form{
 padding-left: 40px;
+}
+#footer1{
+ position: absolute;
+ bottom: 75px;
+ width: 100%;
+ color:black;
+padding-left: 10px;
 }
 #footer{
  position: absolute;
- bottom: 30px;
- width: 90%;
+ bottom: 5px;
+ width: 100%;
  background-color: #ccccc9;
 padding-left: 10px;
 }

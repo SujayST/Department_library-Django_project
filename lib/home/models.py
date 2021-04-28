@@ -2,17 +2,19 @@ from django.db import models
 from django.utils import timezone
 import datetime
 
+
 # Create your models here.
 
-# class lends(models.Model):
-#    transaction_id = models.AutoField(primary_key=True, serialize=True)
-#    USN = models.ForeignKey('Student', on_delete=models.CASCADE)
-#    book_id = models.ForeginKy('books',max_length=5)
-#    issue_date = models.DateField(default=timezone.now())
-#    due_date = models.DateField(default=timezone.now().date()+datetime.timedelta(days=15))
-#
-#   def __str__(self):
-#       return self.USN
+
+class lends(models.Model):
+    transaction_id = models.AutoField(primary_key=True, serialize=True)
+    USN = models.CharField(max_length=12)
+    book_id = models.CharField(max_length=5)
+    issue_date = models.DateField(default=timezone.now())
+    return_date = models.DateField(default=timezone.now())
+
+    def __str__(self):
+        return self.USN
 
 
 class books(models.Model):
@@ -41,7 +43,7 @@ class lendbook(models.Model):
     USNn = models.CharField(max_length=12)
     book_id = models.CharField(max_length=5)
     issue_date = models.DateField(default=timezone.now())
-    due_date = models.DateField(default=timezone.now().date()+datetime.timedelta(days=15))
+    due_date = models.DateField(default=timezone.now().date() + datetime.timedelta(days=15))
 
     def __str__(self):
         return self.USNn

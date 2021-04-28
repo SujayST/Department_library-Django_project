@@ -1,17 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head >
-    <style>
-        .a{
-  padding: 20px;
-   background-image: url("{% static 'Background-website-01.jpg' %}");
-  }
-    </style>
+<head>
     <meta charset="UTF-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     {% block title %} {% endblock %}
     <link rel="stylesheet"
@@ -19,16 +12,14 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
 
-
-
-    <div class="e" width=90%  >{% include 'navbar.html' %}</div>
-
-    <h1 class="a"></h1>
-    <h1 class="a"></h1>
-
+    <title>Document</title>
 </head>
 <body class="a">
+<div class="e" style=" align-self:center ; width: 100%;margin: auto;">{% include 'navbar.html' %}</div>
+<h1 class="a"></h1>
+<h1 class="a"></h1>
 {% block body %}{% endblock %}
-<div class="btn btn-" id="footer" > <h4>Copyright 2020:ASTC.Inc </h4> </div>
+<div id="footer1" align="center"><h4>School of Computer Science & Engg.</h4></div>
+<div class="alert alert-success" id="footer" align="center"><h4>Copyright 2020:ASTC.Inc </h4></div>
 </body>
 </html>

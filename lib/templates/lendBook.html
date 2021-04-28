@@ -3,45 +3,45 @@
 {% block title %}<title>Books Lending</title>{% endblock %}
 
 {% block body %}
-<h1 class="b">This is our Book lending page</h1>
-<p>Book Lending page</p>
+<h1 class="b">Book Lending Portal </h1>
+<h1 class="a"></h1>
 
 
-<h1>List of Students</h1>
+<h1>Enter The Transaction details</h1>
 
 
 <div class="form">
-<form name="form" enctype="multipart/form-data"  method="POST">
-    {% csrf_token %}
-    <div class="form-group" style = "max-width:408px;">
-    <label for="usn"><h3>USN:</h3></label>
-    <input id="usn" class="form-control form-control-lg" type = "text"  name = "USN" value="" />
-    </div>
-    <br>
-    <div class="form-group" style = "max-width:408px;">
-    <label for="bid"><h3>Book ID:</h3></label>
-    <input id="bid" class="form-control form-control-lg" type = "text"   name = "book_id" value=""/>
-    </div>
-    <br>
-    <div class="form-group" style = "max-width:408px;">
-    <label for="issue"><h3>Issue Date:</h3></label>
-    <input id="issue" class="form-control form-control-lg" type = "date"   name = "issue" value=""/>
-    </div>
-    <br>
-    <div class="form-group" style = "max-width:408px;">
-    <label for="due"><h3>Due Date:</h3></label>
-    <input id="due" class="form-control form-control-lg" type = "date"   name = "due" value=""/>
-    </div>
-    <br>
-    <div class="submit">
-    <button class="btn btn-outline-success"  type="submit" name="button"><h2>Submit</h2></button>
-    </div>
+    <form name="form" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <div class="form-group" style="max-width:408px;">
+            <label for="usn"><h3>USN:</h3></label>
+            <input id="usn" class="form-control form-control-lg" type="text" name="USN" value=""/>
+        </div>
 
-</form>
+        <div class="form-group" style="max-width:408px;">
+            <label for="bid"><h3>Book ID:</h3></label>
+            <input id="bid" class="form-control form-control-lg" type="text" name="book_id" value=""/>
+        </div>
+        <br>
+        <div class="form-group" style="max-width:408px;">
+            <label for="issue"><h3>Issue Date:</h3></label>
+            <input id="issue" class="form-control form-control-lg" type="date" name="issue" value=""/>
+        </div>
+        <br>
+        <div class="form-group" style="max-width:408px;">
+            <label for="due"><h3>Due Date:</h3></label>
+            <input id="due" class="form-control form-control-lg" type="date" name="due" value=""/>
+        </div>
+        <br><br><br>
+        <div class="submit">
+            <button class="btn btn-outline-success" type="submit" name="button"><h2>Submit</h2></button>
+        </div>
+
+    </form>
 </div>
 
 
-<h1 class="a"> </h1>
+<h1 class="a"></h1>
 
 
 </body>

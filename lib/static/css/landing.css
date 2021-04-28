@@ -1,0 +1,81 @@
+
+/*body {
+    background-image: url("./imgs/new-banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 98vh;
+    width: 100vw;
+    margin: 0;
+    margin-left: 0;
+  }*/
+  body{
+    background-color: black;
+    margin: 0 ;
+  }
+  section{
+    padding: 0;
+    position: relative;
+    
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+}
+
+.side-bar{
+  position: absolute;
+  margin: auto;
+  top: 10vh;
+  height: 80vh;
+  width: 6vw;
+  background-color:crimson ;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+  .layer1{
+
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    align-self: center;
+    background-color: rgba(255, 0, 0, 0.01);
+  }
+
+/*SIDE-ICONS*/
+.lyr{
+  position: fixed;
+  right: 4vw;
+  top: 34vh;
+  bottom: 60vh;
+  border-radius: .3vw;
+  display:flex;
+  align-items: center;
+  
+}
+.lyr:hover{
+  background-color:  rgba(255, 255, 0,.93);
+  
+}
+.logo{ 
+ 
+  height: 3vw; 
+  width: 3vw;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  opacity: .65;
+}
+.logo:hover{
+  height: 5vw;
+  width: 5vw;
+  opacity: 1;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+#m{
+    background-image:{% static 'Background-website-01.jpg'%};
+    position: relative;
+    color: black;
+}

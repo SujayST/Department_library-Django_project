@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Books Return</title>{% endblock %}
+
+{% block body %}
+<h1 class="b">Book Returning Portal </h1>
+<h1 class="a"></h1>
+
+
+<h1>Enter The Transaction No.</h1>
+
+<h1 class="a"></h1>
+
+<div class="form">
+    <form name="form" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <div class="form-group" style="max-width:408px;">
+            <label for="usn"><h3>Transaction ID:</h3></label>
+            <input id="usn" class="form-control form-control-lg" type="text" name="trnid" value=""/>
+        </div>
+        <br>
+        <div class="form-group" style="max-width:408px;">
+            <label for="due"><h3>Return Date:</h3></label>
+            <input id="due" class="form-control form-control-lg" type="date" name="return_date" value=""/>
+        </div>
+        <br>
+        <div class="submit">
+            <button class="btn btn-outline-success" type="submit" name="button"><h2>Return</h2></button>
+        </div>
+
+    </form>
+</div>
+
+<h1 class="a"></h1>
+<h1>Active Transactions</h1>
+<table width=1200 bgcolor=#33cccc cellpadding="8">
+    <tr bgcolor="white" align="center">
+        <th><h2>Transaction_Id</h2></th>
+        <th><h2>USN</h2></th>
+        <th><h2>Book_Id</h2></th>
+        <th><h2>Issue_date</h2></th>
+        <th><h2>Due_date</h2></th>
+    </tr>
+
+    {% for obj in allvideos %}
+    <tr class="tr" align="center">
+        <td><h3>{{ obj.transaction_id }}</h3>
+            <div class="n"></div>
+        </td>
+        <td><h3>{{ obj.USNn }}</h3></td>
+        <td><h3>{{ obj.book_id }}</h3></td>
+        <td><h3>{{ obj.issue_date}}</h3></td>
+        <td><h3>{{ obj.due_date}}</h3></td>
+    </tr>
+
+    {% endfor %}
+</table>
+<h1 class="a"></h1>
+<h1>Completed Transactions</h1>
+<table width=1200 bgcolor=#33cccc cellpadding="8">
+    <tr bgcolor="white" align="center">
+        <th><h2>Transaction_Id</h2></th>
+        <th><h2>USN</h2></th>
+        <th><h2>Book_Id</h2></th>
+        <th><h2>Issue_date</h2></th>
+        <th><h2>Return_date</h2></th>
+    </tr>
+
+    {% for obj in allvideos1 %}
+    <tr class="tr" align="center">
+        <td><h3>{{ obj.transaction_id }}</h3>
+            <div class="n"></div>
+        </td>
+        <td><h3>{{ obj.USN }}</h3></td>
+        <td><h3>{{ obj.book_id }}</h3></td>
+        <td><h3>{{ obj.issue_date}}</h3></td>
+        <td><h3>{{ obj.return_date}}</h3></td>
+    </tr>
+
+    {% endfor %}
+</table>
+</body>
+{% endblock %}

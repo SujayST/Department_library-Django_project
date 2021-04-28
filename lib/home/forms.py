@@ -13,3 +13,8 @@ class lendForm(forms.Form):
     USN = forms.CharField()
     issue = forms.DateField()
     due = forms.DateField()
+
+
+class transfer(forms.Form):
+    trnid = forms.IntegerField()
+    return_date = forms.DateField()
